@@ -24,14 +24,11 @@ This will start:
 
 ```bash
 docker-compose logs -f
-# Wait until you see the admin credentials logged, then Ctrl+C
 ```
 
-### 3. (Optional) Create a test domain and user account
+### 3. Create a test domain and user account
 
 ```bash
-chmod +x setup-account.sh
-
 # Setup on v0.14.1 (port 8080)
 ./setup-account.sh 8080
 
@@ -46,14 +43,11 @@ This creates:
 ### 4. Inject multiple test emails (required to reproduce the bug)
 
 ```bash
-chmod +x inject-multiple-emails.sh compare-versions.sh
-
-# Inject into alice@example.com account
 ./inject-multiple-emails.sh 8080 3 alice@example.com
 ./inject-multiple-emails.sh 8081 3 alice@example.com
 ```
 
-### 5. Compare results 
+### 5. Compare query results 
 
 `
 ./test-jmap-query.sh 8080 alice@example.com
