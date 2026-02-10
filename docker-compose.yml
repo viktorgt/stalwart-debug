@@ -16,10 +16,10 @@ services:
       - ./stalwart/config.toml:/opt/stalwart/etc/config.toml:ro,Z
     restart: unless-stopped
 
-  stalwart-v0.15.3:
-    image: stalwartlabs/stalwart:v0.15.3-alpine
-    container_name: stalwart-v0.15.3
-    hostname: mail-v0.15.3.local
+  stalwart-v0.15.4:
+    image: stalwartlabs/stalwart:v0.15.4-alpine
+    container_name: stalwart-v0.15.4
+    hostname: mail-v0.15.4.local
     ports:
       - "8081:8080"   # JMAP/HTTP
     environment:
